@@ -5,3 +5,7 @@
 1. Clone the repository to your local repo (machine)
 2. Run 'npm install' to install all packages
 3. Run 'npm start' to start locally
+
+# COTRIBUTION
+
+The develop branch is the defualt branch for the project.
