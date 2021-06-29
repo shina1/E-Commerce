@@ -1,5 +1,7 @@
 # MERN stack e-commerce application.
 
+# DESCRIPTION
+
 # INSTALATION.
 
 1. Clone the repository to your local repo (machine)
