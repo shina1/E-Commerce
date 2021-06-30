@@ -1,0 +1,14 @@
+{
+  "name": "server-side",
+  "version": "1.0.0",
+  "description": "E-commerce server side",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server"
+  },
+  "author": "shina",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
