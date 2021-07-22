@@ -1,13 +1,23 @@
-const express = require("express");
-const products = require("./data/products");
+import express from "express";
+import dotenv from "dotenv";
+import colors from "colors";
+import connectDB from "./config/db.js";
+import products from "./data/products.js";
+
+dotenv.config();
 
 const app = express();
+
+connectDB();
 app.get("/", (req, res) => {
   res.send("API is running...");
 });
 
 app.get("/api/products", (req, res) => {
-  res.json(products);
+  res.status(200).json({
+    status: "success",
+    products,
+  });
 });
 
 app.get("/api/products/:id", (req, res) => {
@@ -15,4 +25,15 @@ app.get("/api/products/:id", (req, res) => {
   res.json(product);
 });
 
-app.listen(5700, console.log("server listining on port 5700"));
+// const PORT = 5700;
+
+// app.listen(PORT, console.log(`server running in  mode on port ${PORT}`));
+const PORT = process.env.PORT || 5700;
+
+app.listen(
+  PORT,
+  console.log(
+    `server running in ${[process.env.NODE_ENV]} mode on port ${PORT}`.yellow
+      .bold
+  )
+);
